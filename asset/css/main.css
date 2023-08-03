@@ -1,0 +1,261 @@
+
+@import url('href="https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+:root{
+    --green:#031f25;
+    --black:#444;
+    --light-color:#111;
+    --text-shadow:.4rem .4rem 0 rgba(2, 2, 2, 0.2);
+    --border:.2rem solid var(--green);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html{
+    font-size: 14px;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: gainsboro;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body{
+    background: url(asset/img/background.png);
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    color:#fff; 
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1.5rem rgba(190, 8, 8, 0.1);
+    background-color: white;
+    border-color: transparent;
+    color: #8d7d7d;
+    
+}
+
+.header .navbar{
+    color: #444;
+}
+.header .logo{
+   width: 30px;
+}
+
+.header .logo span{
+    color:var(--main-color);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color:gray;
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color:var(--black);
+}
+
+#menu-bars{
+    font-size: 3rem;
+    color:gray;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*navbar end*/
+
+/*home start*/
+.home{
+    display: flex;
+    align-items: center;
+   height: 900px;
+    gap:1.5rem;
+    padding-top: 10rem;
+    border-color: transparent;
+    justify-content: center;
+    width:100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  
+}
+.home .responsive{
+    width: 100%;
+    height:700px;
+}
+
+/*home end*/
+.content{
+    display:inline-block;
+    align-items: center;
+   height: auto;
+    gap:1.5rem;
+    padding-top: 10rem;
+    justify-content: center;
+    width:100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+    margin-left: 100px;
+   
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:2rem;
+}
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color:var(--light-color); 
+}
+
+
+.footer .credit span{
+    color:var(--gainsboro);
+}
+.footer1{
+   
+    background-color: #fff;
+    color: gray;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    
+}
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+@media (max-width:768px){
+
+    #menu-bars{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        border-top: .1rem solid #222;
+        background: #222;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar a{
+        display: flex;
+        background:#eff1f2;
+        border-radius: .5rem;
+        padding:1.3rem;
+        margin:1.3rem;
+        font-size: 2rem;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+}
+
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
